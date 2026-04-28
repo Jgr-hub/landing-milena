@@ -884,129 +884,155 @@
             text-shadow: 0 1px 4px rgba(0,0,0,0.3);
         }
 
-        /* ===== TESTIMONIALS ===== */
-        .testimonials {
-            background: var(--navy);
-            overflow: hidden;
-        }
+       /* ===== TESTIMONIALS ===== */
+.testimonials {
+    background: var(--navy);
+    overflow: hidden;
+    padding: 140px 40px;
+}
 
-        .testimonials .section-desc { color: rgba(255,255,255,0.3); }
+.testimonials .section-desc { color: rgba(255,255,255,0.3); }
 
-        .test-wrap {
-            overflow: hidden;
-        }
+.test-wrap { overflow: hidden; position: relative; }
 
-        .test-track {
-            display: flex;
-            gap: 20px;
-            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+.test-track {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
 
-        .test-card {
-            min-width: 100%;
-            flex-shrink: 0;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: var(--radius-lg);
-            padding: 44px 36px;
-        }
+.test-card {
+    flex: 0 0 calc(33.333% - 16px);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: var(--radius-lg);
+    padding: 44px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.4s, transform 0.4s;
+}
 
-        .test-stars {
-            display: flex;
-            gap: 3px;
-            margin-bottom: 24px;
-        }
+.test-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 120px;
+    font-family: Georgia, serif;
+    color: var(--gold);
+    opacity: 0.06;
+    line-height: 1;
+    pointer-events: none;
+}
 
-        .test-stars span { color: var(--gold); font-size: 13px; }
+.test-card:hover {
+    border-color: rgba(197, 165, 114, 0.25);
+    transform: translateY(-4px);
+}
 
-        .test-quote {
-            font-size: 17px;
-            font-weight: 200;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.8;
-            margin-bottom: 32px;
-            font-style: italic;
-        }
+.test-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 24px;
+}
 
-        .test-author {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
+.test-stars span { color: var(--gold); font-size: 13px; }
 
-        .test-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--blue-deep));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--white);
-        }
+.test-quote {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.8;
+    margin-bottom: 32px;
+    font-style: italic;
+}
 
-        .test-name {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--white);
-        }
+.test-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
 
-        .test-proc {
-            font-size: 11px;
-            color: rgba(255,255,255,0.25);
-            font-weight: 300;
-        }
+.test-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    flex-shrink: 0;
+}
 
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            margin-top: 48px;
-        }
+.test-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 3px;
+}
 
-        .carousel-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: transparent;
-            color: rgba(255,255,255,0.4);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s;
-            font-size: 14px;
-        }
+.test-proc {
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: 300;
+}
 
-        .carousel-btn:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
 
-        .carousel-dots {
-            display: flex;
-            gap: 6px;
-        }
+.carousel-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: transparent;
+    color: rgba(255,255,255,0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    font-size: 18px;
+}
 
-        .carousel-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.12);
-            border: none;
-            cursor: pointer;
-            transition: all 0.4s;
-        }
+.carousel-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
 
-        .carousel-dot.active {
-            background: var(--gold);
-            width: 24px;
-            border-radius: 3px;
-        }
+.carousel-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--gold);
+    width: 24px;
+    border-radius: 3px;
+}
+
+/* Responsive testimonials */
+@media (max-width: 767px) {
+    .test-card { flex: 0 0 100%; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    .test-card { flex: 0 0 calc(50% - 12px); }
+}
 
         /* ===== REVIEWS ===== */
         .reviews {
