@@ -1749,135 +1749,100 @@
     </section>
 
     <!-- TESTIMONIALS -->
-/* ===== TESTIMONIALS — HORIZONTAL SCROLL ===== */
-.testimonials {
-    background: var(--navy);
-    overflow: hidden;
-}
+<section class="section testimonials" id="testimonios">
+    <div class="section-inner">
+        <div class="section-header center reveal">
+            <div class="section-label">Testimonios</div>
+            <h2 class="section-title light">Lo que dicen quienes<br>ya transformaron su sonrisa</h2>
+            <p class="section-desc">Historias reales de confianza, transformación y felicidad.</p>
+        </div>
 
-.testimonials .section-desc { 
-    color: rgba(255,255,255,0.3); 
-}
+        <div class="test-wrap reveal">
+            <div class="test-track" id="testTrack">
 
-.test-scroll-container {
-    position: relative;
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"Tenía mucha pena de sonreír. Después del diseño de sonrisa, mi vida cambió completamente."</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="María del Carmen">
+                        <div>
+                            <div class="test-name">María del Carmen</div>
+                            <div class="test-proc">Diseño de Sonrisa</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-scroll-track {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-bottom: 12px;
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"Mis hijos le tenían terror al dentista. Ahora piden venir al consultorio."</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/32.jpg" alt="José Rodríguez">
+                        <div>
+                            <div class="test-name">José Rodríguez</div>
+                            <div class="test-proc">Odontopediatría</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-scroll-track::-webkit-scrollbar { 
-    display: none; 
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"El implante me devolvió la seguridad de comer y reír sin preocupaciones. Quedé fascinado."</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/68.jpg" alt="Andrés López">
+                        <div>
+                            <div class="test-name">Andrés López</div>
+                            <div class="test-proc">Implante Dental</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-card-row {
-    flex: 0 0 350px;
-    scroll-snap-align: start;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: var(--radius-lg);
-    padding: 36px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 220px;
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"El blanqueamiento superó mis expectativas. Quedé con una sonrisa radiante para mi boda."</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Laura Martínez">
+                        <div>
+                            <div class="test-name">Laura Martínez</div>
+                            <div class="test-proc">Blanqueamiento</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-card-row .test-stars {
-    display: flex;
-    gap: 3px;
-    margin-bottom: 16px;
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"El tratamiento de ortodoncia fue más rápido de lo esperaba. El equipo es muy profesional."</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/men/12.jpg" alt="Carlos Peña">
+                        <div>
+                            <div class="test-name">Carlos Peña</div>
+                            <div class="test-proc">Ortodoncia</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-card-row .test-stars span {
-    color: var(--gold);
-    font-size: 13px;
-}
+                <div class="test-card">
+                    <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                    <p class="test-quote">"Llegué con mucho miedo y me fui sintiéndome en las mejores manos. ¡100% recomendado!"</p>
+                    <div class="test-author">
+                        <img class="test-avatar" src="https://randomuser.me/api/portraits/women/21.jpg" alt="Sofía Gómez">
+                        <div>
+                            <div class="test-name">Sofía Gómez</div>
+                            <div class="test-proc">Urgencias Dentales</div>
+                        </div>
+                    </div>
+                </div>
 
-.test-card-row .test-quote {
-    font-size: 15px;
-    font-weight: 200;
-    color: rgba(255,255,255,0.6);
-    line-height: 1.7;
-    margin-bottom: 24px;
-    font-style: italic;
-}
+            </div><!-- fin test-track -->
+        </div><!-- fin test-wrap -->
 
-.test-card-row .test-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        <div class="carousel-nav">
+            <button class="carousel-btn" id="prevBtn">&#8249;</button>
+            <div class="carousel-dots" id="dots"></div>
+            <button class="carousel-btn" id="nextBtn">&#8250;</button>
+        </div>
+    </div>
+</section>
 
-.test-card-row .test-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold), var(--blue-deep));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--white);
-}
-
-.test-card-row .test-name {
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--white);
-}
-
-.test-card-row .test-proc {
-    font-size: 11px;
-    color: rgba(255,255,255,0.25);
-    font-weight: 300;
-}
-
-.test-scroll-container::before,
-.test-scroll-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.test-scroll-container::before {
-    left: 0;
-    background: linear-gradient(90deg, var(--navy), transparent);
-}
-
-.test-scroll-container::after {
-    right: 0;
-    background: linear-gradient(-90deg, var(--navy), transparent);
-}
-
-.test-scroll-hint {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 28px;
-    color: rgba(255,255,255,0.2);
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.test-scroll-hint span {
-    animation: breathe 3s ease-in-out infinite;
-}
 
     <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
