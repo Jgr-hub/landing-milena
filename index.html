@@ -1749,81 +1749,135 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section testimonials" id="testimonios">
-        <div class="section-inner">
-            <div class="section-header center reveal">
-                <div class="section-label">Testimonios</div>
-                <h2 class="section-title light">Lo que dicen quienes<br>ya transformaron su sonrisa</h2>
-                <p class="section-desc light">Historias reales de confianza, transformación y felicidad.</p>
-            </div>
+/* ===== TESTIMONIALS — HORIZONTAL SCROLL ===== */
+.testimonials {
+    background: var(--navy);
+    overflow: hidden;
+}
 
-            <div class="test-wrap">
-                <div class="test-track" id="testTrack">
-                    <div class="test-card">
-                        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <p class="test-quote">"Tenía mucha pena de sonreír. Después del diseño de sonrisa con la Dra. Milena, mi vida cambió completamente. Ahora sonrío sin pensar en nada más."</p>
-                        <div class="test-author">
-                            <div class="test-avatar">MC</div>
-                            <div>
-                                <div class="test-name">María del Carmen</div>
-                                <div class="test-proc">Diseño de Sonrisa</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="test-card">
-                        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <p class="test-quote">"Mis hijos le tenían terror al dentista. La Dra. Milena los trata con una dulzura increíble. Ahora piden venir al consultorio."</p>
-                        <div class="test-author">
-                            <div class="test-avatar">JR</div>
-                            <div>
-                                <div class="test-name">José Rodríguez</div>
-                                <div class="test-proc">Odontopediatría</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="test-card">
-                        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <p class="test-quote">"Perdí un diente en un accidente y pensé que nunca más sería igual. Con el implante que me hizo, ni yo noto la diferencia."</p>
-                        <div class="test-author">
-                            <div class="test-avatar">AL</div>
-                            <div>
-                                <div class="test-name">Andrés López</div>
-                                <div class="test-proc">Implante Dental</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="test-card">
-                        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <p class="test-quote">"La ortodoncia me duró menos de lo esperado y el resultado es espectacular. La Dra. Milena es muy profesional y te hace sentir tranquila."</p>
-                        <div class="test-author">
-                            <div class="test-avatar">KP</div>
-                            <div>
-                                <div class="test-name">Karol Patiño</div>
-                                <div class="test-proc">Ortodoncia</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="test-card">
-                        <div class="test-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-                        <p class="test-quote">"Sufría de mucha sensibilidad dental. Con el tratamiento láser, desapareció todo. Volví a comer helado sin miedo."</p>
-                        <div class="test-author">
-                            <div class="test-avatar">SM</div>
-                            <div>
-                                <div class="test-name">Sandra Mejía</div>
-                                <div class="test-proc">Láser para Sensibilidad</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.testimonials .section-desc { 
+    color: rgba(255,255,255,0.3); 
+}
 
-            <div class="carousel-nav">
-                <button class="carousel-btn" id="prevBtn" aria-label="Anterior">←</button>
-                <div class="carousel-dots" id="dots"></div>
-                <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">→</button>
-            </div>
-        </div>
-    </section>
+.test-scroll-container {
+    position: relative;
+}
+
+.test-scroll-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 12px;
+}
+
+.test-scroll-track::-webkit-scrollbar { 
+    display: none; 
+}
+
+.test-card-row {
+    flex: 0 0 350px;
+    scroll-snap-align: start;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-lg);
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
+
+.test-card-row .test-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 16px;
+}
+
+.test-card-row .test-stars span {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.test-card-row .test-quote {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.test-card-row .test-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.test-card-row .test-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--blue-deep));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.test-card-row .test-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.test-card-row .test-proc {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    font-weight: 300;
+}
+
+.test-scroll-container::before,
+.test-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.test-scroll-container::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--navy), transparent);
+}
+
+.test-scroll-container::after {
+    right: 0;
+    background: linear-gradient(-90deg, var(--navy), transparent);
+}
+
+.test-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    color: rgba(255,255,255,0.2);
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.test-scroll-hint span {
+    animation: breathe 3s ease-in-out infinite;
+}
 
     <!-- REVIEWS -->
     <section class="section reviews" id="reviews">
